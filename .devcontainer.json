@@ -1,0 +1,30 @@
+{
+  "image": "rocker/binder:4.3",
+  "settings": {
+    "extensions.ignoreRecommendations": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "git.rebaseWhenSync": true,
+    "files.exclude": {
+      ".devcontainer.json": true
+    }
+  },
+  "features": {
+    "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
+      "packages": "languageserver"
+    },
+    "ghcr.io/rocker-org/devcontainer-features/quarto-cli:latest": {
+      "installTinyTex": "false"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "reditorsupport.r",
+        "ms-toolsai.jupyter",
+        "jaydesl.vscode-r-arrow"
+      ]
+    }
+  }
+}
