@@ -1,30 +1,30 @@
 {
-  "image": "rocker/binder:4.3",
-  "settings": {
-    "markdown.preview.security.level": "allow-insecure-local-content",
-    "extensions.ignoreRecommendations": true,
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "git.postCommitCommand": "sync",
-    "git.autofetch": true,
-    "githubPullRequests.createOnPublishBranch": "never",
-    "git.useEditorAsCommitInput": false,
-    "git.rebaseWhenSync": true,
-    "terminal.integrated.ignoreProcessKeybindingWarnings": true,
-    "files.exclude": {
-      ".devcontainer.json": true
-    }
-  },
+  "image": "rocker/binder:4.4",
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
-      "packages": "languageserver,quantmod,xts,lubridate,zoo,PerformanceAnalytics,dtplyr,data.table,ISLR2,car,purrr,slider,leaps,pls,glmnet,pacman,dynlm,urca,moments,evir,plotly"
+      "packages": "languageserver,MASS,ISLR2,car,quantmod,lubridate,zoo,data.table,glue,ggplot2,broom,slider,boot,leaps,pls,glmnet,pacman,dynlm,readxl,urca,xts,PerformanceAnalytics,dtplyr,moments,evir,plotly"
     },
     "ghcr.io/rocker-org/devcontainer-features/quarto-cli:latest": {
-      "installTinyTex": "false"
+      "installTinyTex": "true"
     }
   },
   "customizations": {
     "vscode": {
+      "settings": {
+        "markdown.preview.security.level": "allow-insecure-local-content",
+        "extensions.ignoreRecommendations": true,
+        "git.enableSmartCommit": true,
+        "git.confirmSync": false,
+        "git.postCommitCommand": "sync",
+        "git.autofetch": true,
+        "githubPullRequests.createOnPublishBranch": "never",
+        "git.useEditorAsCommitInput": false,
+        "git.rebaseWhenSync": true,
+        "terminal.integrated.ignoreProcessKeybindingWarnings": true,
+        "files.exclude": {
+          ".devcontainer.json": true
+        }
+      },
       "extensions": [
         "reditorsupport.r",
         "ms-toolsai.jupyter",
